@@ -1,0 +1,2 @@
+.appbody,body{background:#000;color:#fff}.movie-app>.row{overflow-x:auto;flex-wrap:nowrap}.image-container{position:relative;transition:-webkit-transform .2s;transition:transform .2s;transition:transform .2s,-webkit-transform .2s;width:auto}.image-container:hover{cursor:pointer;-webkit-transform:scale(1.1);transform:scale(1.1)}.image-container:hover .overlay{opacity:1}.overlay{position:absolute;background:rgba(0,0,0,.8);width:100%;transition:.5s ease;opacity:0;bottom:0;font-size:20px;text-align:center}
+/*# sourceMappingURL=main.dae99f8e.chunk.css.map */
