@@ -2,14 +2,15 @@ import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import MovieList from "./MovieList";
 import "./../app.css";
-import { makeStyles } from "@material-ui/core/styles";
-import { CssBaseline } from "@material-ui/core";
+import NullComponent from "./NullComponent";
+// import { makeStyles } from "@material-ui/core/styles";
 import MovieListHeading from "./MovieListHeading";
-const useStyles = makeStyles((theme) => ({
-  ourchoices: {
-    marginTop: "10px",
-  },
-}));
+import MoreAbout from "./MoreAbout";
+// const useStyles = makeStyles((theme) => ({
+//   ourchoices: {
+//     marginTop: "10px",
+//   },
+// }));
 const Top = () => {
   const [movies, setMovies] = useState([
     {
@@ -261,6 +262,15 @@ const Top = () => {
     },
   ]);
 
+  // const buttonClicked = () => {
+  //   console.log("Clicked");
+  // };
+  const getimdbpage = (movie) => {
+    const imdb = movie.imdbID;
+    console.log(imdb);
+    window.open(`https://www.imdb.com/title/${imdb}/`, "_blank");
+  };
+
   return (
     <div className="appbody">
       <h1 style={{ paddingTop: "10px" }}>
@@ -268,7 +278,11 @@ const Top = () => {
       </h1>
       <div className="container-fluid movie-app" id="top">
         <div className="row">
-          <MovieList movies={movies} />
+          <MovieList
+            movies={movies}
+            favouriteComponent={MoreAbout}
+            handleFavouritesClick={getimdbpage}
+          />
         </div>
       </div>
     </div>
